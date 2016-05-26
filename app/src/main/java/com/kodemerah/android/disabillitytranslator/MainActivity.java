@@ -3,6 +3,7 @@ package com.kodemerah.android.disabillitytranslator;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.AsyncTask;
@@ -68,6 +69,9 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
+
+        SQLiteDatabase db = new DBHelper(this, null, null, 2).getWritableDatabase();
+
 
 
 
